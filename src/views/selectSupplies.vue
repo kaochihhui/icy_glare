@@ -45,9 +45,9 @@ export default {
 
 <style scoped lang="scss">
 .listGroup{
-  height: 450px;
+  height: 400px;
   overflow: auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   .listElement{
     font-size: 24px;
