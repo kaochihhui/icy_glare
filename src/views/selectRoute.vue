@@ -29,12 +29,4 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .poleBtn{
-    p{
-      font-size: 24px;
-      border: 1px solid #fff;
-      padding: 15px 30px;
-      display: inline-block;
-    }
-  }
 </style>

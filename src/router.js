@@ -26,5 +26,10 @@ export default new Router({
       name: 'selectMember',
       component: () => import('./views/selectMember.vue')
     },
+    {
+      path: '/selectSupplies',
+      name: 'selectSupplies',
+      component: () => import('./views/selectSupplies.vue')
+    },
   ]
 })

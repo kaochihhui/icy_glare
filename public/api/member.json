@@ -1,0 +1,104 @@
+{
+  "members": [
+    {
+      "id":"1",
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "id":"2",
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "id":"3",
+      "name": "Eternal Flame",
+      "age": 65,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    },
+    {
+      "id":"4",
+      "name": "wer ggsdf",
+      "age": 43,
+      "secretIdentity": "werq",
+      "powers": [
+        "wqre",
+        "rwe Imrewrmunity",
+        "dsf",
+        "sfgdadfgh",
+        "trew hgfd"
+      ]
+    },
+    {
+      "id":"5",
+      "name": "wer ggsdf",
+      "age": 43,
+      "secretIdentity": "werq",
+      "powers": [
+        "wqre",
+        "rwe Imrewrmunity",
+        "dsf",
+        "sfgdadfgh",
+        "trew hgfd"
+      ]
+    },
+    {
+      "id":"6",
+      "name": "wer ggsdf",
+      "age": 43,
+      "secretIdentity": "werq",
+      "powers": [
+        "wqre",
+        "rwe Imrewrmunity",
+        "dsf",
+        "sfgdadfgh",
+        "trew hgfd"
+      ]
+    },
+    {
+      "id":"7",
+      "name": "wer ggsdf",
+      "age": 43,
+      "secretIdentity": "werq",
+      "powers": [
+        "wqre",
+        "rwe Imrewrmunity",
+        "dsf",
+        "sfgdadfgh",
+        "trew hgfd"
+      ]
+    },
+    {
+      "id":"8",
+      "name": "wer ggsdf",
+      "age": 43,
+      "secretIdentity": "werq",
+      "powers": [
+        "wqre",
+        "rwe Imrewrmunity",
+        "dsf",
+        "sfgdadfgh",
+        "trew hgfd"
+      ]
+    }
+  ]
+}
