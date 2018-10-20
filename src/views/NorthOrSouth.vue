@@ -20,11 +20,11 @@ export default {
 
 <style scoped lang="scss">
   img{
-    width: 250px;
+    width: 200px;
     margin-top: 20%;
   }
   .poleBtn{
-    background-color: #80808073;
+    background-color: rgba(255,255,255, 0.35);
     margin-bottom: 50px;
     padding: 20px 0px;
 

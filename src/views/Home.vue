@@ -1,9 +1,11 @@
 <template>
   <div class="home">
-    <p>POLAR QUEST</p>
+    <img src="@/assets/logo-quest.svg" alt="">
+    <!-- <p>POLAR QUEST</p> -->
     <div class="startBtn">
       <router-link to="/NorthOrSouth">START</router-link>
     </div>
+    <div class="bag_background"></div>
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <!-- <HelloWorld msg="POLAR QUEST"/> -->
   </div>
@@ -22,7 +24,10 @@ export default {
 </script>
 <style scoped lang="scss">
   .home{
-    padding-top: 50%;
+    padding-top: 40%;
+    img{
+      width: 200px;
+    }
     p{
       font-size: 32px;
     }
@@ -33,8 +38,19 @@ export default {
         color: #fff;
         text-decoration: none;
         border: 1px solid #fff;
-        padding: 15px 30px;
+        padding: 10px 20px;
+        font-size: 24px;
       }
+    }
+    .bag_background{
+      background-image: url("../assets/bag_bg.svg");
+      height: 300px;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-size: cover;
     }
   }
 </style>

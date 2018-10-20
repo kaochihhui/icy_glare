@@ -36,5 +36,10 @@ export default new Router({
       name: 'openCamera',
       component: () => import('./views/openCamera.vue')
     },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('./views/dashboard.vue')
+    },
   ]
 })

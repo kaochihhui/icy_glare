@@ -7,10 +7,10 @@
 
       <LoadingIndicator v-show="loading" />
     </QrcodeReader>
-
+    <br><br>
     <!-- <selectMsg msg="Pack your supplies"/> -->
     <!-- <nextBtn v-if="goNext" redirectUrl="/"></nextBtn> -->
-    <!-- <nextBtn redirectUrl="/"></nextBtn> -->
+    <nextBtn redirectUrl="/dashboard"></nextBtn>
   </div>
 </template>
 <script>
@@ -22,11 +22,14 @@ import InitHandler from '@/mixins/InitHandler'
 
 // import selectMsg from '@/components/selectMsg.vue'
 
-// import nextBtn from '@/components/nextBtn.vue'
+import nextBtn from '@/components/nextBtn.vue'
 
 export default {
   name: 'openCamera',
-  components: { QrcodeReader },
+  components: {
+    QrcodeReader,
+    nextBtn
+  },
   mixins: [ InitHandler ],
   data() {
       return {

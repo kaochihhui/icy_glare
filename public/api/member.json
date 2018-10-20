@@ -2,9 +2,10 @@
   "members": [
     {
       "id":"1",
-      "name": "Molecule Man",
+      "name": "David",
+      "img": "members-01.svg",
       "age": 29,
-      "secretIdentity": "Dan Jukes",
+      "secretIdentity": "Pilot",
       "powers": [
         "Radiation resistance",
         "Turning tiny",
@@ -13,9 +14,10 @@
     },
     {
       "id":"2",
-      "name": "Madame Uppercut",
+      "name": "Mary",
+      "img": "members-02.svg",
       "age": 39,
-      "secretIdentity": "Jane Wilson",
+      "secretIdentity": "Engineer",
       "powers": [
         "Million tonne punch",
         "Damage resistance",
@@ -24,9 +26,10 @@
     },
     {
       "id":"3",
-      "name": "Eternal Flame",
+      "name": "John",
+      "img": "members-03.svg",
       "age": 65,
-      "secretIdentity": "Unknown",
+      "secretIdentity": "Doctor",
       "powers": [
         "Immortality",
         "Heat Immunity",
@@ -37,9 +40,10 @@
     },
     {
       "id":"4",
-      "name": "wer ggsdf",
+      "name": "Cindy",
+      "img": "members-04.svg",
       "age": 43,
-      "secretIdentity": "werq",
+      "secretIdentity": "Researcher",
       "powers": [
         "wqre",
         "rwe Imrewrmunity",
@@ -50,9 +54,10 @@
     },
     {
       "id":"5",
-      "name": "wer ggsdf",
+      "name": "Tom",
+      "img": "members-05.svg",
       "age": 43,
-      "secretIdentity": "werq",
+      "secretIdentity": "Scientist",
       "powers": [
         "wqre",
         "rwe Imrewrmunity",
@@ -63,9 +68,10 @@
     },
     {
       "id":"6",
-      "name": "wer ggsdf",
+      "name": "Cooper",
+      "img": "members-06.svg",
       "age": 43,
-      "secretIdentity": "werq",
+      "secretIdentity": "Engineer",
       "powers": [
         "wqre",
         "rwe Imrewrmunity",
@@ -76,9 +82,10 @@
     },
     {
       "id":"7",
-      "name": "wer ggsdf",
+      "name": "Lawrence",
+      "img": "members-07.svg",
       "age": 43,
-      "secretIdentity": "werq",
+      "secretIdentity": "Doctor",
       "powers": [
         "wqre",
         "rwe Imrewrmunity",
@@ -89,9 +96,10 @@
     },
     {
       "id":"8",
-      "name": "wer ggsdf",
+      "name": "Alex",
+      "img": "members-08.svg",
       "age": 43,
-      "secretIdentity": "werq",
+      "secretIdentity": "Cooker",
       "powers": [
         "wqre",
         "rwe Imrewrmunity",

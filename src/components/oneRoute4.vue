@@ -6,9 +6,9 @@
     <div class="routeName">{{rName}}</div>
     <div class="routeStar">
       <img src="../assets/star-yellow.svg" alt="">
-      <img src="../assets/star-white.svg" alt="">
-      <img src="../assets/star-white.svg" alt="">
-      <img src="../assets/star-white.svg" alt="">
+      <img src="../assets/star-yellow.svg" alt="">
+      <img src="../assets/star-yellow.svg" alt="">
+      <img src="../assets/star-yellow.svg" alt="">
       <img src="../assets/star-white.svg" alt="">
     </div>
 
