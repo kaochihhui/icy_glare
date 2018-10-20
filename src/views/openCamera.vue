@@ -1,6 +1,12 @@
 <template>
   <div class="openCamera">
-    <QrcodeReader @decode="onDecode"></QrcodeReader>
+    <QrcodeReader
+      @decode="onDecode"
+      @init="onInit">
+      <div class="decoded-content">{{ content }}</div>
+
+      <LoadingIndicator v-show="loading" />
+    </QrcodeReader>
 
     <!-- <selectMsg msg="Pack your supplies"/> -->
     <!-- <nextBtn v-if="goNext" redirectUrl="/"></nextBtn> -->
@@ -8,8 +14,11 @@
   </div>
 </template>
 <script>
-import Vue from 'vue'
+// import Vue from 'vue'
 import { QrcodeReader } from 'vue-qrcode-reader'
+import InitHandler from '@/mixins/InitHandler'
+
+// console.log(QrcodeReader)
 
 // import selectMsg from '@/components/selectMsg.vue'
 
@@ -17,12 +26,11 @@ import { QrcodeReader } from 'vue-qrcode-reader'
 
 export default {
   name: 'openCamera',
-  components: {
-    QrcodeReader
-
-  },
+  components: { QrcodeReader },
+  mixins: [ InitHandler ],
   data() {
       return {
+        content: ''
           // video: {},
           // canvas: {},
           // captures: []
@@ -38,10 +46,13 @@ export default {
   //     }
   // },
   methods: {
-    onDecode (decodedString) {
-      alert(decodedString);
-      // ...
+    onDecode (content) {
+      this.content = content
     }
+    // onDecode (decodedString) {
+    //   alert(decodedString);
+    //   // ...
+    // }
   }
 }
 </script>
