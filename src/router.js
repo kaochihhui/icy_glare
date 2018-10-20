@@ -31,5 +31,10 @@ export default new Router({
       name: 'selectSupplies',
       component: () => import('./views/selectSupplies.vue')
     },
+    {
+      path: '/openCamera',
+      name: 'openCamera',
+      component: () => import('./views/openCamera.vue')
+    },
   ]
 })

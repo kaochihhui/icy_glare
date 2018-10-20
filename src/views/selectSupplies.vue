@@ -1,11 +1,8 @@
 <template>
-  <div class="selectRoute">
+  <div class="selectSupplies">
     <selectMsg msg="Pack your supplies"/>
-    <div class="" v-for="">
-
-    </div>
     <!-- <nextBtn v-if="goNext" redirectUrl="/"></nextBtn> -->
-    <nextBtn redirectUrl="/"></nextBtn>
+    <nextBtn redirectUrl="/openCamera"></nextBtn>
   </div>
 </template>
 <script>
@@ -14,7 +11,7 @@ import selectMsg from '@/components/selectMsg.vue'
 import nextBtn from '@/components/nextBtn.vue'
 
 export default {
-  name: 'selectRoute',
+  name: 'selectSupplies',
   components: {
     selectMsg,
     nextBtn
