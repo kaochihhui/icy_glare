@@ -44,10 +44,13 @@
         <img src="../assets/dashboard/game-18.svg" alt="">
       </div>
     </div>
-    <div class="drawerBtn" @click="toggle">
+    <div v-if="drawerbtn" class="drawerBtn" @click="toggle">
       <img src="../assets/dashboard/game-19.svg" alt="">
     </div>
-    <SlideUpDown :active="active" ref="upDownEl">
+    <div v-if="drawerdownBtnbtn" class="drawerdownBtnbtn" @click="toggledown">
+      <img src="../assets/dashboard/game-20.svg" alt="">
+    </div>
+    <!-- <SlideUpDown :active="active" ref="upDownEl">
 
       <div class="logSection">
         <virtualList :size="20" :remain="8" wtag="ul">
@@ -55,10 +58,13 @@
         </virtualList>
       </div>
 
-    </SlideUpDown>
+    </SlideUpDown> -->
     <div class="logGroup">
-
-
+      <div class="logSection">
+        <virtualList :size="20" :remain="8" wtag="ul">
+            <li class="item" v-for="(udf, index) of items" :key="index">Item: # {{ index }}</li>
+        </virtualList>
+      </div>
     </div>
 
 
@@ -70,6 +76,7 @@
 <script>
 import virtualList from 'vue-virtual-scroll-list'
 import SlideUpDown from 'vue-slide-up-down'
+import $ from 'jquery'
 // import Vue from 'vue'
 
 // console.log(QrcodeReader)
@@ -84,7 +91,9 @@ export default {
       return {
         items: new Array(100000),
         active: false,
-        questionText: null
+        questionText: null,
+        drawerbtn: true,
+        drawerdownBtnbtn: false,
       }
   },
   components: {
@@ -100,15 +109,35 @@ export default {
 
   methods: {
     toggle () {
-      this.active = !this.active
+      this.drawerbtn = !this.drawerbtn;
+      this.drawerdownBtnbtn = !this.drawerdownBtnbtn;
+      // $(".drawerdownBtnbtn").animate({
+      //   bottom:"200px"
+      // });
+      $(".logGroup").animate({
+        height:"200px"
+      });
+    },
+    toggledown(){
+      this.drawerbtn = !this.drawerbtn;
+      this.drawerdownBtnbtn = !this.drawerdownBtnbtn;
+
+      $(".logGroup").animate({
+        height:"0"
+      });
+      // $(".drawerBtn").animate({
+      //   bottom:"0"
+      // });
     }
-  }
+  },
+
+
 }
 </script>
 
 <style scoped lang="scss">
 .dashboard{
-  padding-top: 50px;
+  padding-top: 20px;
   .progressBar{
     padding: 0 20px;
   }
@@ -152,6 +181,9 @@ export default {
       margin-right: 10px;
     }
   }
+  h2{
+    margin: 10px 0;
+  }
   .squares{
     img{
       width: 130px;
@@ -160,29 +192,44 @@ export default {
       display: inline-block;
     }
   }
-  .logGroup{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
-
-  }
   .drawerBtn{
     // position: absolute;
     // top: 0;
     width: 100px;
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-bottom: -5px;
-    // left: 50%;
-    // -webkit-transform: translateX(-50%);
-    // transform: translateX(-50%)
+    position: absolute;
+    bottom: 0;
+
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
   }
-  .logSection{
-    // position: absolute;
-    // top: 0;
-    background-color: #454868;
+  .drawerdownBtnbtn{
+    width: 100px;
+    // margin: 0 auto;
+    margin-bottom: -10px;
+    position: absolute;
+    bottom: 200px;
+
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  .logGroup{
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 0;
+    background-color: #454868;
+    .logSection{
+      // position: absolute;
+      // top: 0;
+
+      // width: 100%;
+    }
   }
+
 
 
 }
