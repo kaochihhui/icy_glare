@@ -36,18 +36,40 @@
     <h2>New status</h2>
     <div class="squares">
       <div class="qrcode">
-        <img src="../assets/dashboard/game-17.svg" alt="">
+        <router-link to="/openCamera">
+          <img src="../assets/dashboard/game-17.svg" alt="">
+        </router-link>
       </div>
       <div class="event">
         <img src="../assets/dashboard/game-18.svg" alt="">
       </div>
     </div>
+    <div class="drawerBtn" @click="toggle">
+      <img src="../assets/dashboard/game-19.svg" alt="">
+    </div>
+    <SlideUpDown :active="active" ref="upDownEl">
+
+      <div class="logSection">
+        <virtualList :size="20" :remain="8" wtag="ul">
+            <li class="item" v-for="(udf, index) of items" :key="index">Item: # {{ index }}</li>
+        </virtualList>
+      </div>
+
+    </SlideUpDown>
+    <div class="logGroup">
+
+
+    </div>
+
+
     <!-- <selectMsg msg="Pack your supplies"/> -->
     <!-- <nextBtn v-if="goNext" redirectUrl="/"></nextBtn> -->
     <!-- <nextBtn redirectUrl="/"></nextBtn> -->
   </div>
 </template>
 <script>
+import virtualList from 'vue-virtual-scroll-list'
+import SlideUpDown from 'vue-slide-up-down'
 // import Vue from 'vue'
 
 // console.log(QrcodeReader)
@@ -60,11 +82,26 @@ export default {
   name: 'dashboard',
   data() {
       return {
+        items: new Array(100000),
+        active: false,
+        questionText: null
       }
+  },
+  components: {
+    virtualList,
+    SlideUpDown
+  },
+  mounted () {
+    const el = this.$refs.upDownEl.$refs.container
+    el.addEventListener('transitionend', () => {
+      // console.log('transition ended')
+    })
   },
 
   methods: {
-
+    toggle () {
+      this.active = !this.active
+    }
   }
 }
 </script>
@@ -108,7 +145,7 @@ export default {
     .leftColumn,.rightColumn{
       display: inline-block;
       img{
-        width: 120px;
+        width: 130px;
       }
     }
     .leftColumn{
@@ -117,11 +154,36 @@ export default {
   }
   .squares{
     img{
-      width: 100px;
+      width: 130px;
     }
     .qrcode,.event{
       display: inline-block;
     }
   }
+  .logGroup{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+  }
+  .drawerBtn{
+    // position: absolute;
+    // top: 0;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: -5px;
+    // left: 50%;
+    // -webkit-transform: translateX(-50%);
+    // transform: translateX(-50%)
+  }
+  .logSection{
+    // position: absolute;
+    // top: 0;
+    background-color: #454868;
+    width: 100%;
+  }
+
+
 }
 </style>

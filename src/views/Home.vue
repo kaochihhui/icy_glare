@@ -24,7 +24,7 @@ export default {
 </script>
 <style scoped lang="scss">
   .home{
-    padding-top: 40%;
+    padding-top: 20%;
     img{
       width: 200px;
     }
