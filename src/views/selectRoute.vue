@@ -1,11 +1,11 @@
 <template>
   <div class="selectRoute">
     <selectMsg msg="Select a route"/>
-    <oneRoute rName="route1" v-bind:starCount="1" @click.native="goNext = true"/>
-    <oneRoute2 rName="route2" v-bind:starCount="2" @click.native="goNext = true"/>
-    <oneRoute3 rName="route3" v-bind:starCount="3" @click.native="goNext = true"/>
-    <oneRoute4 rName="route4" v-bind:starCount="4" @click.native="goNext = true"/>
-    <oneRoute5 rName="route5" v-bind:starCount="5" @click.native="goNext = true"/>
+    <oneRoute rName="McMurdo" v-bind:starCount="1" @click.native="goNext = true"/>
+    <oneRoute2 rName="Vostok" v-bind:starCount="2" @click.native="goNext = true"/>
+    <oneRoute3 rName="Concordia" v-bind:starCount="3" @click.native="goNext = true"/>
+    <oneRoute4 rName="Mawson" v-bind:starCount="4" @click.native="goNext = true"/>
+    <oneRoute5 rName="Syowa" v-bind:starCount="5" @click.native="goNext = true"/>
     <nextBtn v-if="goNext" redirectUrl="/selectMember"></nextBtn>
   </div>
 </template>

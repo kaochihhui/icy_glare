@@ -1,10 +1,12 @@
 <template>
   <div class="dashboard">
     <div class="progressBar">
-      <img src="../assets/dashboard/game-09.svg" alt="">
+      <div class="progressBarbg"></div>
+      <div class="progressBardiv"><p>38 days</p></div>
+      <!-- <img src="../assets/dashboard/game-09.svg" alt=""> -->
     </div>
     <div class="graySection">
-      <div class="supplies">
+      <div class="supplies" @click="slideRight">
         <img src="../assets/dashboard/game-10.svg" alt="">
         <p>supplies</p>
       </div>
@@ -67,6 +69,17 @@
       </div>
     </div>
 
+    <div class="suppliesList">
+      <ul>
+        <li>Thermal Socks</li>
+        <li>Binoculars</li>
+        <li>Kindle</li>
+        <li>Daypack</li>
+        <li>Head Torch</li>
+        <li>Water Bottle</li>
+      </ul>
+    </div>
+
 
     <!-- <selectMsg msg="Pack your supplies"/> -->
     <!-- <nextBtn v-if="goNext" redirectUrl="/"></nextBtn> -->
@@ -94,6 +107,7 @@ export default {
         questionText: null,
         drawerbtn: true,
         drawerdownBtnbtn: false,
+        ifslideRight: true
       }
   },
   components: {
@@ -128,6 +142,20 @@ export default {
       // $(".drawerBtn").animate({
       //   bottom:"0"
       // });
+    },
+    slideRight(){
+      if(this.ifslideRight){
+        $(".suppliesList").animate({
+          right:0
+        });
+        this.ifslideRight = !this.ifslideRight;
+      }else{
+        $(".suppliesList").animate({
+          right:"-220px"
+        });
+        this.ifslideRight = !this.ifslideRight;
+      }
+
     }
   },
 
@@ -138,8 +166,28 @@ export default {
 <style scoped lang="scss">
 .dashboard{
   padding-top: 20px;
+
+
   .progressBar{
     padding: 0 20px;
+    position: relative;
+    margin-bottom: 20px;
+    .progressBardiv{
+      height: 30px;
+      width: 38%;
+      background-color: green;
+      position: absolute;
+      top: 0;
+      text-align: center;
+    }
+    .progressBarbg{
+      height: 30px;
+      width: 100%;
+      background-color: #fff;
+    }
+    p{
+      margin: 5px 0 0 0;
+    }
   }
   .graySection{
     background-color: rgba(255,255,255, 0.35);
@@ -229,8 +277,16 @@ export default {
       // width: 100%;
     }
   }
-
-
-
+  .suppliesList{
+    position: absolute;
+      width: 200px;
+      height: 200px;
+      font-size: 20px;
+      right: -220px;
+      top: 100px;
+      padding: 0 10px 30px;
+      background-color: #333;
+      text-align: left;
+  }
 }
 </style>
